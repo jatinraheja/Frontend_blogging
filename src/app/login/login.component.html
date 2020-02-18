@@ -1,0 +1,61 @@
+<!--<div class="background">-->
+<!--  <div class="card loginform mt-5 col-5 container-fluid">-->
+<!--    <div class="labelclass mb-4 mt-4 text-center">-->
+<!--      <h2>LOG IN</h2>-->
+<!--    </div>-->
+<!--    <form class="ml-5">-->
+<!--      <div class="form-group mt-2 col-12 mb-4">-->
+<!--        &lt;!&ndash;  <label for="email" class="labelclass">Email</label>&ndash;&gt;-->
+<!--        <input type="Email" class="form-control inputsize col-10 " name="email"  placeholder="Enter Email">-->
+<!--      </div>-->
+<!--      <div class="form-group mt-2 col-12 mb-4">-->
+<!--        &lt;!&ndash;  <label for="pwd" class="labelclass ">Password</label>&ndash;&gt;-->
+<!--        <input type="password" class="form-control inputsize col-10" name="password"  placeholder="Enter Password">-->
+<!--      </div>-->
+<!--      &lt;!&ndash;    <div class="form-check col-12 mb-4 ml-4">&ndash;&gt;-->
+<!--      &lt;!&ndash;      <label class="form-check-label">Remeber me&ndash;&gt;-->
+<!--      &lt;!&ndash;      </label>&ndash;&gt;-->
+<!--      &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--      <div class="col-12 mb-4">-->
+<!--        <button type="submit" class="btn inputsize btn-primary col-10">LOGIN</button>-->
+<!--      </div>-->
+<!--      <p class="labelclass mt-2 ml-4">New to Blogging.in?<a routerLink="/signup"><span style="text-decoration:underline">SIGNUP</span></a></p>-->
+
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="container">
+  <div class="card card-container">
+    <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin" (ngSubmit)="logoin()" #loginform="ngForm">
+      <div class="form-group">
+        <span id="reauth-email" class="reauth-email"></span>
+        <input type="email" id="inputEmail" class="form-control"  placeholder="Email address" [(ngModel)]="username" name="email" email required #emailvalue="ngModel">
+        <div class="alert alert-danger" [hidden]="emailvalue.valid || emailvalue.pristine">Please Enter a valid email</div>
+
+      </div>
+      <div class="form-group">
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" [(ngModel)]="password" name="password" required #passwordvalue="ngModel">
+        <div class="alert alert-danger" [hidden]="passwordvalue.valid || passwordvalue.pristine">Passwod is *Required</div>
+      </div>
+        <!--      <div id="remember">-->
+
+<!--          <input type="checkbox" value="remember-me"><span class="pl-2">Remember me</span>-->
+
+<!--      </div>-->
+      <button class="btn btn-lg btn-primary btn-block btn-signin mt-1" type="submit" [disabled]="!loginform.valid">Sign in</button>
+    </form><!-- /form -->
+<!--    <a href="#" class="forgot-password">-->
+<!--      Forgot the password?-->
+<!--    </a>-->
+    <div class="d-flex">
+      <div><span class="newuser" (click)="gotosignup()">New User?</span></div>
+   <div><span><span class="forgot-password" (click)="gotosignup()">
+     Register here
+    </span></span></div>
+    </div>
+  </div><!-- /card-container -->
+</div><!-- /container -->

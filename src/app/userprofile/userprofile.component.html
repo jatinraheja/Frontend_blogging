@@ -1,0 +1,29 @@
+<div class="row mr-auto ml-auto mt-5">
+  <div class="card card1 ml-auto">
+    <img  class="rounded circle text-center rounded-circle ml-4 mr-4 mt-2" src="assets/images/myprofile1.jpg" style="height:160px;width:160px;background-color:lightgray">
+    <div class="usr ml-5 mt-2">@{{username}}</div>
+<!--    <div class="btn btncart mt-4 w-60 ml-5 mr-auto" (click)="editprofile()">Edit profile</div>-->
+    <!--    <div class="btn btncart mt-4 w-70 ml-5 mr-auto" (click)="order()">Order history</div>-->
+
+  </div>
+
+  <div class="container">
+    <div class="card card1 bg-light p-4 col-lg-6">
+      <!--    <img class="rounded circle text-center rounded-circle mx-auto" src="assets/image/myprofile1.jpg" style="height:120px;width:140px;background-color:lightgray">-->
+      <div class="text-center"><h3>User details</h3></div>
+      <div class="text-center" style="color:gray"><p></p></div>
+      <div class="mt-2">Username:<span class="pl-4 position">{{username}}</span></div>
+
+      <div class="mt-2 ">Email<span class="pl-4 position">:</span> <span class="ml-5">{{email}}</span></div>
+<div *ngIf="!followed">
+      <div class="mt-5 btn btn-primary" (click)="follow()">Follow</div>
+  </div>
+      <div *ngIf="followed">
+        <div class="mt-5 btn btn-primary">Following</div>
+      </div>
+<!--      <div class="mt-2">Contact <span class="pl-4 position">:</span><span class="ml-5">{{contact}}</span></div>-->
+<!--      <div class="mt-2">Gender <span class="pl-4 position">:</span><span class="ml-5">{{gender}}</span></div>-->
+    </div>
+  </div>
+</div>
+

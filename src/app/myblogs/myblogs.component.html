@@ -1,0 +1,22 @@
+<div class="container pt-5">
+  <div class="row">
+    <div *ngFor="let blog of usersblogs">
+      <div class="card cardstyle mr-5 mb-5">
+        <button class="btn btn-danger btnsize">{{blog.blogs.category}}</button>
+        <img src="{{blog.blogs.img}}" (click)="getdetails(blog.blogs.id)" class="image">
+        <!--        <span class="item"><b>{{images.name}}</b></span>-->
+        <!--        <span class="price"><b>₹{{images.price}}</b></span>-->
+        <!--        <span class="off">{{images.off}}</span>-->
+        <!--       <div class=" btn-info mt-1 bttn col-10" (click)="productdetails(images.productid)">Product Details</div>-->
+        <!--        <div class="btn btncart mt-2 w-50 ml-auto mr-auto" (click)="addtocart(images.productid)">Add to cart</div>-->
+
+        <p class="heading" (click)="getdetails(blog.blogs.id)"><b>{{blog.blogs.heading}}</b></p>
+        <p><span class="text-muted">By</span><span class="ml-2 text-info">{{blog.blogs.writer}}</span></p>
+        <div class="btn btncart mt-2 w-50 ml-auto mr-auto" (click)="getdetails(blog.blogs.id)">Read more</div>
+        <div class="btn btn-primary mt-2 w-50 ml-auto mr-auto" (click)="gotoedit(blog.blogs.id)">Edit Blog</div>
+        <div class="btn btn-secondary mt-2 w-50 ml-auto mr-auto" (click)="deleteblog(blog.blogs.id)">Delete Blog</div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+.carouselimg{
+  width: 100%;
+  height: 400px;
+}
+.carouselimg2
+{
+  width: 100%;
+  height: 500px;
+}
+.brand
+{
+  font-family: 'Satisfy', cursive;
+}
+.active-purple .fa,
+.active-purple-2 .fa {
+  color: #ce93d8;
+}
+.searchbox
+{
+
+}
+.search
+{
+  color: dodgerblue;
+}
+.search:hover,
+.search:active,
+.search:focus
+{
+  color: dodgerblue;
+}
+.searchbox:hover,
+.searchbox:active,
+.searchbox:focus
+{
+  border: 1px solid dodgerblue;
+  //box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.3);;
+}
+.btnsize
+{
+  width : 8em;
+}
+.navback
+{
+  background-color: indianred;
+  color: white;
+}
+.has-search .form-control {
+  padding-left:1em;
+  padding-right: 10em;
+
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.cardstyle
+{
+  width:20rem;
+
+}
+.heading
+{
+
+}
+.heading :hover,
+.heading :focus,
+.heading :active
+{
+  color: #0072ff;
+}
+.image
+{
+  width: 100%;
+  height: 250px;
+  padding-bottom: 10px;
+
+}
+.btncart
+{
+
+  color: #235789;
+  border-radius: 1rem;
+  border-color: #235789;
+}
+.btncart:hover
+{
+  background-color: #235789;
+  color: white;
+}
+

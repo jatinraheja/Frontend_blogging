@@ -1,0 +1,91 @@
+<h1>Edit Blog</h1>
+
+<form  class="container">
+
+  <div class="form-group mt-5">
+    <label>Enter Category</label>
+    <input  class="form-control"  name="category" [(ngModel)]="category">
+  </div>
+  <div class="form-group">
+    <label>Enter image source</label>
+    <input  class="form-control" name="img" [(ngModel)]="img">
+  </div>
+  <div class="form-group">
+    <label>Enter Name of blog</label>
+    <input  class="form-control" name="name" [(ngModel)]="name">
+  </div>
+  <div class="form-group">
+    <label>Enter Heading of the Blog</label>
+    <textarea  rows="5" cols="10" class="form-control" name="heading" [(ngModel)]="heading">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter paragraph</label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detail1" [(ngModel)]="detail1">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter sub paragraph 1 of first paragraph</label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detail11" [(ngModel)]="detail11">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter sub paragraph 2 of first paragraph</label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detail12" [(ngModel)]="detail12">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter sub heading 1</label>
+    <input  class="form-control" name="h1" [(ngModel)]="h1">
+  </div>
+  <div class="form-group">
+    <label>Enter paragraph of sub heading 1</label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detailh1" [(ngModel)]="detailh1">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter sub paragraph 1 of sub heading 1</label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detailh11" [(ngModel)]="detailh11">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter sub paragraph 2 of sub heading 1</label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detailh12" [(ngModel)]="detailh12">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter sub  heading 2 </label>
+    <input  class="form-control" name="h2" [(ngModel)]="h2">
+  </div>
+  <div class="form-group">
+    <label>Enter paragraph of sub  heading 2 </label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detailh2" [(ngModel)]="detailh2">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter sub paragraph 1 of sub heading 2 paragraph</label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detail21" [(ngModel)]="detailh21">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label>Enter sub paragraph 2 of sub heading 2 paragraph</label>
+    <textarea  rows="5" cols="10"  class="form-control" name="detail22" [(ngModel)]="detailh22">
+    </textarea>
+  </div>
+
+  <!--  <div class="form-group form-check">-->
+  <!--    <label class="form-check-label">-->
+  <!--      <input class="form-check-input" type="checkbox"> Remember me-->
+  <!--    </label>-->
+  <!--  </div>-->
+  <div class=" mt-3 ml-auto mr-auto mb-5">
+    <span class="status">Status</span><br>
+    <div class="form-check-input">
+      <input type="radio" name="status" (click)="statusofblog('private')" class="mr-1">Private
+    </div>
+    <div class="form-check-input ml-5">
+     <input type="radio" name="status" (click)="statusofblog('public')" class="mr-1">Public
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="editblog()">EditBlog</button>
+</form>

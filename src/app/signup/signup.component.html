@@ -1,0 +1,38 @@
+<div class="container register-form">
+  <form class="form" name="form" (ngSubmit)="register()">
+    <div class="note">
+      <p>Register Here</p>
+    </div>
+
+    <div class="form-content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="formclass form-control form" placeholder="Your Name *" name="username"  [(ngModel)]="username" required #usernamevalue="ngModel"/>
+            <div [hidden]="usernamevalue.valid || usernamevalue.pristine" class="alert alert-danger">Enter a username</div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="formclass form form-control" placeholder="Email *" name="email" [(ngModel)]="email" email required #emailvalue="ngModel"/>
+            <div [hidden]="emailvalue.valid || emailvalue.pristine" class="alert alert-danger">Enter a valid Email</div>
+<!--          <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">-->
+<!--            <div *ngIf="email.error.required">Email required</div>-->
+<!--            <div *ngIf="email.error.email">Enter a valid Email address</div>-->
+<!--          </div>-->
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="formclass form form-control" placeholder="Your Password *" name="password"  [(ngModel)]="password"  required #passwordvalue="ngModel"/>
+            <div [hidden]="passwordvalue.valid" class="alert alert-danger">Enter a Password</div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="formclass form form-control" placeholder="Confirm Password *" name="confirmpassword"  [(ngModel)]="confirmpassword" required #confirmpasswordvalue="ngModel"/>
+            <div [hidden]="confirmpasswordvalue.valid" class="alert alert-danger">Confirm your Password</div>
+          </div>
+        </div>
+      </div>
+      <button  class="btnSubmit" type="submit">Register</button>
+    </div>
+  </form>
+</div>

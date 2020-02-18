@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-sm navback">
+  <ul class="navbar-nav ">
+
+    <div class="ml-5">
+       <li class="nav-item mr-5" routerLink="/">Home</li>
+    </div>
+      <div class="ml-5">
+       <li class="nav-item mr-5" (click)="getblogbycategory('Business')">Business</li>
+      </div>
+    <div class="ml-5">
+     <li class="nav-item mr-5" (click)="getblogbycategory('Internet')">Internet</li>
+    </div>
+     <div class="ml-5">
+      <li class="nav-item mr-5" (click)="getblogbycategory('Technology')">Technology</li>
+     </div>
+
+  </ul>
+
+<!--<div class="form-group has-search ml-auto d-flex">-->
+<!--  &lt;!&ndash;      <span class="fa fa-search form-control-feedback search" (click)="searchvalue()"></span>&ndash;&gt;-->
+<!--  <div><input type="text" class="form-control searchbox" [(ngModel)]="search" placeholder="Search by blog owner"></div>-->
+<!--  <button class="btn btn-primary" (click)="searchvalue()">Search</button>-->
+<!--</div>-->
+<!--</nav>-->
+<!--<div class="container">-->
+<!--  <button class="mr-5 btn btn-primary b">Feed</button>-->
+<!--  <button class="mr-5 btn btn-primary">My blogs</button>-->
+<!--</div>-->
+</nav>
+<div class="container-fluid mt-5 mb-5 ml-auto mr-auto">
+  <div class="col-10 ml-auto mr-auto carouselimg2">
+    <ngb-carousel class="ml-auto">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/images/blog1.jpg" alt="Random first slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">10 seconds between slides...</h3>-->
+        <!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+        <!--    </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/images/blog7.jpg" alt="Random second slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">No mouse events...</h3>-->
+        <!--      <p class="text-dark">This carousel doesn't pause or resume on mouse events</p>-->
+        <!--    </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/images/blog3.jpg"  alt="Random third slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">No keyboard...</h3>-->
+        <!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+        <!--    </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/images/blog4.jpg" alt="Random fourth slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">And no wrap after last slide.</h3>-->
+        <!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+        <!--    </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class="carouselimg2" src="../assets/images/blog5.jpg" alt="Random fifth slide">
+        </div>
+        <!--    <div class="carousel-caption">-->
+        <!--      <h3 class="text-dark">And no wrap after last slide.</h3>-->
+        <!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+        <!--    </div>-->
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>
+<nav class="navbar navbar-expand-sm barback container">
+  <ul class="navbar-nav">
+    <li class="bar">The Latest</li>
+  </ul>
+</nav>
+<div class="container pt-5">
+  <div class="row">
+    <div *ngFor="let blog of blogs">
+      <div class="card cardstyle mr-5 mb-5">
+        <button class="btn btn-danger btnsize">{{blog.category}}</button>
+<img src="{{blog.img}}" (click)="getdetails(blog.id)" class="image">
+<!--        <span class="item"><b>{{images.name}}</b></span>-->
+<!--        <span class="price"><b>₹{{images.price}}</b></span>-->
+        <!--        <span class="off">{{images.off}}</span>-->
+        <!--       <div class=" btn-info mt-1 bttn col-10" (click)="productdetails(images.productid)">Product Details</div>-->
+<!--        <div class="btn btncart mt-2 w-50 ml-auto mr-auto" (click)="addtocart(images.productid)">Add to cart</div>-->
+
+        <p class="heading" (click)="getdetails(blog.id)"><b>{{blog.heading}}</b></p>
+        <p (click)="gotouserprofile(blog.writer)"><span class="text-muted">By</span><span class="ml-2 text-info">{{blog.writer}}</span></p>
+        <div class="btn btncart mt-2 w-50 ml-auto mr-auto" (click)="getdetails(blog.id)">Read more</div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
